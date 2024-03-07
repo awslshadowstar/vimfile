@@ -1,0 +1,52 @@
+{
+        "languageserver": {
+                "clangd": {
+                        "arguments": [
+                                "-std=c++20"
+                        ],
+                        "command": "clangd",
+                        "filetypes": [
+                                "c",
+                                "cc",
+                                "cpp",
+                                "c++",
+                                "objc",
+                                "objcpp"
+                        ],
+                        "rootPatterns": [
+                                "compile_flags.txt",
+                                "compile_commands.json"
+                        ]
+                },
+                "cmake": {
+                        "command": "cmake-language-server",
+                        "filetypes": [
+                                "cmake"
+                        ],
+                        "initializationOptions": {
+                                "buildDirectory": "build"
+                        },
+                        "rootPatterns": [
+                                "build/"
+                        ]
+                },
+                "dockerfile": {
+                        "args": [
+                                "--stdio"
+                        ],
+                        "command": "docker-langserver",
+                        "filetypes": [
+                                "dockerfile"
+                        ]
+                },
+                "go": {
+                        "command": "gopls",
+                        "filetypes": [
+                                "go"
+                        ],
+                        "rootPatterns": [
+                                "go.mod"
+                        ]
+                }
+        }
+}
